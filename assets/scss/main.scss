@@ -1,0 +1,60 @@
+$background-body-light: #fff;
+$background-header-light: #ff6347;
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    background-color: $background-body-light;
+}
+header{
+    background-color: $background-header-light;
+    color: #fff;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    #container{
+        width: 90%;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+#left-control{
+    display: flex;
+    align-items: center;
+    a{
+        color: #fff;
+        span{
+            font-size: 2rem;
+        }
+    }
+    #date{
+        display: block;
+        margin-left: 15px;
+        font-size: 1.2rem;
+    }
+}
+#right-control{
+    button#theme{
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 1rem;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        outline: none;
+        span{
+            float: left;
+        }
+    }
+}

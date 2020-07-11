@@ -3,11 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager</title>
+    <title>Manage daily tasks</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <div id="container">
+            <div id="left-control">
+                <a href="#">
+                    <span class="material-icons">
+                    home
+                    </span>
+                </a>
+                <div id="date"><strong>Hoje</strong> <small><span>sáb jul 11</span></small> </div>
+            </div>
+            <div id="logo"><img src="" alt="logo">logo aqui</div>
+            <div  id="right-control">
+                <button id="theme">
+                    <span class="material-icons">
+                    palette
+                    </span> <p>Tema</p> 
+                </button>
+            </div>
+        </div>
+    </header>
+    <main id="content">
+        <div id="board">
+            <div id="board__title">
+                <p>To do</p>
+            </div>
+            <div id="task">
+                <span id="task__status">status</span>
+                <div id="task__title">Limpar a casa</div>
+                <div id="task__description">Não esquecer de lavar o congelador</div>
+            </div>
+            <div id="add-task">
+                <button>[+] Adicionar tarefa </button>
+            </div>
+        </div>
 
+        <div id="board">
+            <div id="board__title">
+                <p>In Progress</p>
+            </div>
+            <div id="task">
+                <span id="task__status">status</span>
+                <div id="task__title">Limpar a casa</div>
+                <div id="task__description">Não esquecer de lavar o congelador</div>
+            </div>
+        </div>
+
+        <div id="board">
+            <div id="board__title">
+                <p>Done</p>
+            </div>
+            <div id="task">
+                <span id="task__status">status</span>
+                <div id="task__title">Limpar a casa</div>
+                <div id="task__description">Não esquecer de lavar o congelador</div>
+            </div>
+        </div>
+
+        <div id="board">
+            <div id="board__title">
+                <p>Discarted</p>
+            </div>
+            <div id="task">
+                <span id="task__status">status</span>
+                <div id="task__title">Limpar a casa</div>
+                <div id="task__description">Não esquecer de lavar o congelador</div>
+            </div>
+        </div>
+    </main>
 
     <script src="app.js"></script>
 </body>
