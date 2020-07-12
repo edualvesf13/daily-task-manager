@@ -1,9 +1,17 @@
+::-webkit-scrollbar {
+  height: 10px; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff6347;
+  border-radius: 10px; }
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box; }
 
 body {
+  height: 100vh;
   font-family: 'Ubuntu', sans-serif;
   font-size: 1rem;
   background-color: #fff; }
@@ -51,8 +59,13 @@ header {
   #right-control button#theme span {
     float: left; }
 
+main {
+  height: 100%;
+  overflow: auto; }
+
 #content {
-  margin-top: 70px;
+  min-width: 1366px;
+  margin: 70px auto;
   display: flex;
   justify-content: space-between;
   padding-left: 70px;
@@ -60,6 +73,8 @@ header {
 
 #board {
   width: 300px;
+  flex-basis: 300px;
+  flex-shrink: 0;
   background-color: #dadada;
   border-radius: 5px;
   padding: 10px; }
@@ -131,3 +146,37 @@ body.dark {
   body.dark #add-task button {
     background-color: #282828;
     color: #fdfdfd; }
+
+body.neutral {
+  background-color: #FFF; }
+  body.neutral header {
+    background-color: #F7F7F7;
+    color: #666; }
+  body.neutral #left-control a {
+    color: #666; }
+  body.neutral #right-control button#theme {
+    color: #666; }
+  body.neutral #board {
+    background-color: #f8f8f8; }
+    body.neutral #board #board__title {
+      color: #666; }
+  body.neutral #task {
+    background-color: #FFF;
+    color: #666; }
+  body.neutral #add-task button {
+    background-color: #F7F7F7;
+    color: tomato; }
+
+@media only screen and (max-width: 1024px) {
+  #content {
+    padding-left: 0px;
+    padding-right: 0px; } }
+
+@media only screen and (max-width: 600px) {
+  #board {
+    width: 355px;
+    flex-basis: 355px;
+    margin-right: 10px; }
+  #content {
+    padding-left: 10px;
+    padding-right: 10px; } }

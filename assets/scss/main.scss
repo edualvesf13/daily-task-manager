@@ -1,3 +1,4 @@
+// default variables of color
 $background-body-light: #fff;
 $background-header-light: #ff6347;
 $background-board-light: #dadada;
@@ -11,12 +12,30 @@ $background-board-dark: #474747;
 $background-task-dark: #666666;
 $color-task-dark: #fdfdfd;
 
+// variables of colors of the theme neutral
+$background-body-neutral: #FFF;
+$background-header-neutral: #F7F7F7;
+$background-board-neutral: #f8f8f8;
+$background-task-neutral: #FFF;
+$color-task-neutral: #666;
+
+// Configuration of the scroll bar.
+
+::-webkit-scrollbar{
+    height: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: $background-header-light;
+    border-radius: 10px;
+}
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 body{
+    height: 100vh;
     font-family: 'Ubuntu', sans-serif;
     font-size: 1rem;
     background-color: $background-body-light;
@@ -71,8 +90,13 @@ header{
         }
     }
 }
+main{
+    height: 100%;
+    overflow: auto;
+}
 #content{
-    margin-top: 70px;
+    min-width: 1366px;
+    margin:70px auto;
     display: flex;
     justify-content: space-between;
     padding-left: 70px;
@@ -80,6 +104,8 @@ header{
 }
 #board{
     width: 300px;
+    flex-basis: 300px;
+    flex-shrink: 0;
     background-color: $background-board-light;
     border-radius: 5px;
     padding: 10px;
@@ -163,4 +189,59 @@ body.dark{
             color: $color-task-dark;
         }
     };
+}
+
+// Theme neutral
+body.neutral{
+    background-color: $background-body-neutral;
+    header{
+        background-color: $background-header-neutral;
+        color: $color-task-neutral;
+    };
+    #left-control{
+        a{
+            color: $color-task-neutral;
+        }
+    }
+    #right-control{
+        button#theme{
+            color: $color-task-neutral;
+        }
+    }
+    #board{
+        background-color: $background-board-neutral;
+        #board__title{
+            color: $color-task-neutral;
+        }
+    }
+    #task{
+        background-color: $background-task-neutral;
+        color: $color-task-neutral;
+    }
+    #add-task {
+        button{
+            background-color: $background-header-neutral;
+            color: tomato;
+        }
+    };
+}
+
+// Medias queries
+
+@media only screen and (max-width: 1024px){
+    #content{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+@media only screen and (max-width: 600px){
+    #board{
+        width: 355px;
+        flex-basis: 355px;
+        margin-right: 10px;
+    }
+    #content{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
