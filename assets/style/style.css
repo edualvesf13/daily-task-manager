@@ -100,7 +100,8 @@ main {
   margin-top: 10px;
   border-radius: 5px;
   padding: 5px;
-  color: #333; }
+  color: #333;
+  cursor: pointer; }
 
 #task__status {
   width: 30px;
