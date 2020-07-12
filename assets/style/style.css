@@ -95,6 +95,7 @@ main {
   font-weight: bold; }
 
 #task {
+  position: relative;
   background-color: #fff;
   margin-top: 10px;
   border-radius: 5px;
@@ -105,6 +106,20 @@ main {
   width: 30px;
   height: 6px;
   border-radius: 5px;
+  display: block; }
+
+#task__trash {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  color: #333;
+  opacity: 0.4;
+  cursor: pointer;
+  display: none; }
+  #task__trash:hover {
+    opacity: 1; }
+
+#task:hover #task__trash {
   display: block; }
 
 #task__title {

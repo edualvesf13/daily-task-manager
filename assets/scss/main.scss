@@ -127,6 +127,7 @@ main{
     font-weight: bold;
 }
 #task{
+    position: relative;
     background-color: $background-task-light;
     margin-top: 10px;
     border-radius: 5px;
@@ -137,6 +138,21 @@ main{
     width: 30px;
     height: 6px;
     border-radius: 5px;
+    display: block;
+}
+#task__trash{
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    color: $color-task-light;
+    opacity: 0.4;
+    cursor: pointer;
+    display: none;
+    &:hover{
+        opacity: 1;
+    }
+}
+#task:hover #task__trash{
     display: block;
 }
 #task__title{
