@@ -116,3 +116,18 @@ header {
     border-radius: 2px;
     cursor: pointer;
     outline: none; }
+
+body.dark {
+  background-color: #1f1f1f; }
+  body.dark header {
+    background-color: #282828; }
+  body.dark #board {
+    background-color: #474747; }
+    body.dark #board #board__title {
+      color: #fdfdfd; }
+  body.dark #task {
+    background-color: #666666;
+    color: #fdfdfd; }
+  body.dark #add-task button {
+    background-color: #282828;
+    color: #fdfdfd; }

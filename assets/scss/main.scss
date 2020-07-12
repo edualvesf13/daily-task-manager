@@ -4,6 +4,13 @@ $background-board-light: #dadada;
 $background-task-light: #fff;
 $color-task-light: #333;
 
+// variables of colors of the theme dark
+$background-body-dark: #1f1f1f;
+$background-header-dark: #282828;
+$background-board-dark: #474747;
+$background-task-dark: #666666;
+$color-task-dark: #fdfdfd;
+
 *{
     margin: 0px;
     padding: 0px;
@@ -132,4 +139,28 @@ header{
         cursor: pointer;
         outline: none;
     }
+}
+
+// Theme dark
+body.dark{
+    background-color: $background-body-dark;
+    header{
+        background-color: $background-header-dark;
+    };
+    #board{
+        background-color: $background-board-dark;
+        #board__title{
+            color: $color-task-dark;
+        }
+    }
+    #task{
+        background-color: $background-task-dark;
+        color: $color-task-dark;
+    }
+    #add-task {
+        button{
+            background-color: $background-header-dark;
+            color: $color-task-dark;
+        }
+    };
 }
