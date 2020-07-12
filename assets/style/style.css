@@ -63,8 +63,21 @@ header {
   background-color: #dadada;
   border-radius: 5px;
   padding: 10px; }
-  #board #board__title {
-    font-weight: bold; }
+
+.todo #task__status {
+  background-color: #2ecc71; }
+
+.in-progress #task__status {
+  background-color: #f1c40f; }
+
+.done #task__status {
+  background-color: #3498db; }
+
+.discarted #task__status {
+  background-color: #e74c3c; }
+
+#board__title {
+  font-weight: bold; }
 
 #task {
   background-color: #fff;
@@ -72,21 +85,23 @@ header {
   border-radius: 5px;
   padding: 5px;
   color: #333; }
-  #task #task__status {
-    width: 30px;
-    height: 6px;
-    border-radius: 5px;
-    background-color: green;
-    display: block; }
-  #task #task__title {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-top: 5px;
-    margin-bottom: 5px; }
-  #task #task__description {
-    font-size: 0.8rem;
-    padding-left: 5px;
-    font-style: italic; }
+
+#task__status {
+  width: 30px;
+  height: 6px;
+  border-radius: 5px;
+  display: block; }
+
+#task__title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+#task__description {
+  font-size: 0.8rem;
+  padding-left: 5px;
+  font-style: italic; }
 
 #add-task {
   width: 100%;
