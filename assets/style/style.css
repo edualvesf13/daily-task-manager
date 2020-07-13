@@ -76,11 +76,20 @@ main {
 
 #board {
   width: 300px;
+  height: fit-content;
   flex-basis: 300px;
   flex-shrink: 0;
   background-color: #dadada;
-  border-radius: 5px;
-  padding: 10px; }
+  border-radius: 5px; }
+
+#dropzone {
+  padding: 10px;
+  position: relative;
+  width: 100%; }
+
+.is-dragging {
+  cursor: move;
+  opacity: 0.3; }
 
 .todo #task__status {
   background-color: #2ecc71; }
@@ -139,7 +148,7 @@ main {
 
 #add-task {
   width: 100%;
-  margin-top: 15px; }
+  margin: 15px; }
   #add-task button {
     padding: 10px;
     background-color: #ff6347;

@@ -107,11 +107,20 @@ main{
 }
 #board{
     width: 300px;
+    height: fit-content;
     flex-basis: 300px;
     flex-shrink: 0;
     background-color: $background-board-light;
     border-radius: 5px;
+}
+#dropzone{
     padding: 10px;
+    position: relative;
+    width: 100%;
+}
+.is-dragging{
+    cursor: move;
+    opacity: 0.3;
 }
 // Etiquetas
 .todo #task__status{
@@ -173,7 +182,7 @@ main{
 
 #add-task {
     width: 100%;
-    margin-top: 15px;
+    margin: 15px;
     button{
         padding: 10px;
         background-color: $background-header-light;
