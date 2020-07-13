@@ -1,34 +1,12 @@
 const tasks = document.querySelectorAll('#task')
 const dropzones = document.querySelectorAll('#dropzone')
 
-tasks.forEach( task => {
-    task.addEventListener('dragstart', dragstart)
-    task.addEventListener('drag', drag)
-    task.addEventListener('dragend', dragend)
-} )
-
-dropzones.forEach( dropzone => {
-    dropzone.addEventListener('dragenter', dragenter)
-    dropzone.addEventListener('dragover', dragover)
-    dropzone.addEventListener('dragleave', dragleave)
-    dropzone.addEventListener('drop', drop)
-} )
-
-
 function dragstart(){
    this.classList.add('is-dragging')
 }
 
-function drag(){
-   
-}
-
 function dragend(){
     this.classList.remove('is-dragging')
-}
-
-function dragenter(){
-   
 }
 
 function dragover(){
@@ -36,10 +14,15 @@ function dragover(){
    this.appendChild(taskBeingDragged)
 }
 
-function dragleave(){
-   
-}
+tasks.forEach( task => {
+    task.addEventListener('dragstart', dragstart)
+    task.addEventListener('dragend', dragend)
+    task.addEventListener('touchstart', dragstart)
+    task.addEventListener('touchend', dragend)
+} )
 
-function drop(event){
-   
-}
+dropzones.forEach( dropzone => {
+    dropzone.addEventListener('dragover', dragover)
+    dropzone.addEventListener('touchover', dragover)
+
+} )
